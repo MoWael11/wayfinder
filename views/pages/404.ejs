@@ -107,7 +107,10 @@
       <div>
         <% if (suggestedUrl) { %>
         <p>
-          Did you mean <a href="<%= suggestedUrl %>"><%= suggestedUrl %></a>?
+          Did you mean
+          <a href="<%= suggestedUrl %>"
+            ><%= suggestionURL.replace(/^https?:\/\//, "") %></a
+          >?
         </p>
         <% } else { %>
         <p>
