@@ -1,8 +1,6 @@
-import { Router } from 'express';
-import postRoute from './post.route';
-import statusRoute from './status.route';
-import catchAllRoute from './catch-all.route';
+import { Router } from "express";
+import catchAllRoute from "./catch-all.route";
 
-const api = Router().use('/status', statusRoute).use('/posts', postRoute).all('*', catchAllRoute);
+const api = Router().all("*", catchAllRoute);
 
-export default Router().use('/', api) as Router;
+export default Router().use("/", api) as Router;

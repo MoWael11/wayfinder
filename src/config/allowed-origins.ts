@@ -1,1 +1,1 @@
-export default ['*'];
+export default [process.env.BASE_URL];

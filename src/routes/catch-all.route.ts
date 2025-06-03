@@ -1,4 +1,5 @@
-import { Router, Request, Response } from 'express';
+import { catchAll } from "@/controller/catch-all.controller";
+import { Router } from "express";
 
 const router: Router = Router();
 
@@ -7,8 +8,6 @@ const router: Router = Router();
  * @route {GET} /status
  * @auth optional
  */
-router.route('/').get((_: Request, res: Response) => {
-  res.sendStatus(404);
-});
+router.route("/").all(catchAll);
 
-module.exports = router;
+export default router;
