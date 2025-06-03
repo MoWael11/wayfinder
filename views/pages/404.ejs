@@ -105,8 +105,10 @@
       <h1>404</h1>
       <h3>Not Found :-&lpar;</h3>
       <div>
-        <% if(suggestedUrl){ %>
-        <p>aha</p>
+        <% if (suggestedUrl) { %>
+        <p>
+          Did you mean<a href="<%= suggestedUrl %>"><%= suggestedUrl %></a>?
+        </p>
         <% } else { %>
         <p>
           The page you are looking for might have been removed, had its name

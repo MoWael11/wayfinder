@@ -1,1 +1,1 @@
-export default ["test", "naval-battles", "aipdf", "files", "chatvibe"];
+export default ["test", "naval-battles", "aipdf", "files", "chatvibe", "www"];
