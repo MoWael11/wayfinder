@@ -1,0 +1,41 @@
+{
+  "name": "wayfinder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "rimraf dist && tsup",
+    "clean": "rimraf dist",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint src/**/*.ts",
+    "prebuild": "pnpm lint"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "express-async-errors": "^3.1.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.1",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "jiti": "^2.4.2",
+    "rimraf": "^6.0.1",
+    "tslib": "^2.8.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.29.0"
+  },
+  "cexMetadata": {
+    "initVersion": "1.4.4"
+  },
+  "packageManager": "pnpm@10.10.0"
+}
