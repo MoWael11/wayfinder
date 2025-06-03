@@ -32,7 +32,9 @@ function buildSuggestionUrl(req: Request, bestMatch: string): string {
   parts[0] = bestMatch;
   const newHost = parts.join(".");
 
-  return `${protocol}://${newHost}${req.originalUrl}`;
+  return `${protocol}://${newHost}${
+    req.originalUrl === "/" ? "" : req.originalUrl
+  }`;
 }
 
 export const catchAll = (req: Request, res: Response) => {
