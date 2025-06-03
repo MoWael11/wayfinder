@@ -1,6 +1,3 @@
-// handle error on async functions so middleware can catch it
-import "express-async-errors";
-
 import cors from "./middlewares/cors";
 import express from "express";
 import "dotenv/config";
